@@ -1,0 +1,17 @@
+name: GitActions-Demo3
+on:
+  schedule:
+    # 한국시간 13:55 = UTC 04:55
+    - cron: '55 4 * * *'
+
+jobs:
+  check-kst-time:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report time (KST & UTC)
+        run: |
+          echo "Workflow ran on schedule!"
+          echo "Current UTC time: $(date -u)"
+          
+          # 한국 시간 출력 (Asia/Seoul)
+          echo "Current KST time: $(TZ='Asia/Seoul' date)"
