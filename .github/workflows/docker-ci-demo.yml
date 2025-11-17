@@ -12,7 +12,7 @@ on:
       - 'v*.*.*'
 
 env:
-  DOCKER_IMAGE_NAME: dbgurum/nodejs-ci
+  DOCKER_IMAGE_NAME: hana0305/nodejs-ci
 
 jobs:
   push:
